@@ -1,0 +1,17 @@
+.foto {
+                width: 25px;
+                height: 25px;
+                border: 4px solid #38bdf8;
+                border-radius: 50%;
+                overflow: hidden;
+                flex-shrink: 0;
+            }
+
+            .foto jpg {
+                width: 10%;
+                height: 10%;
+                object-fit: cover;
+                object-position: center 25%;
+                display: block;
+            }
+c:\Users\Lenovo\Downloads\WhatsApp Image 2026-06-12 at 13.41.43.jpeg 

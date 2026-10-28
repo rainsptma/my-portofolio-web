@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        /* Navigasi */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #111827;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav h2 {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* Beranda */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 8%;
+            gap: 40px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            line-height: 1.8;
+            max-width: 550px;
+            margin: 20px 0 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        /* FOTO PROFIL BULAT */
+        .foto {
+            width: 250px;
+            height: 250px;
+            min-width: 250px;
+            border: 4px solid #38bdf8;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+            border-radius: 50%;
+            display: block;
+        }
+
+        /* Bagian konten */
+        section.content {
+            padding: 70px 8%;
+            text-align: center;
+            scroll-margin-top: 80px;
+        }
+
+        .judul {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .judul span {
+            color: #38bdf8;
+        }
+
+        .tentang {
+            background: #111827;
+        }
+
+        .deskripsi {
+            max-width: 750px;
+            margin: auto;
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        /* Kartu */
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 25px;
+            border-radius: 12px;
+            width: 270px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        .ikon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        /* Kontak */
+        .kontak {
+            background: #111827;
+        }
+
+        .kontak p {
+            margin: 15px 0;
+            color: #cbd5e1;
+        }
+
+        .kontak a:not(.btn) {
+            color: #38bdf8;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            color: #94a3b8;
+            background: #0f172a;
+        }
+
+        /* Tampilan HP */
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 50px 6%;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .foto {
+                width: 200px;
+                height: 200px;
+                min-width: 200px;
+            }
+
+            .judul {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .foto {
+                width: 170px;
+                height: 170px;
+                min-width: 170px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigasi -->
+    <nav>
+        <h2>My Portfolio.</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#keahlian">Keahlian</a></li>
+            <li><a href="#proyek">Proyek</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Beranda -->
+    <section class="hero" id="home">
+        <div>
+            <h3>Halo, selamat datang!</h3>
+
+            <h1>Saya <span>Brayyan Rains Pratama</span></h1>
+
+            <h2>Mahasiswa Universitas Bangka Belitung</h2>
+
+            <p>
+                Saya tertarik pada dunia teknologi, desain website,
+                dan pemrograman. Saya ingin terus belajar untuk
+                mengembangkan kemampuan dan menciptakan karya digital
+                yang bermanfaat bagi banyak orang.
+            </p>
+
+            <a href="#proyek" class="btn">Lihat Proyek</a>
+        </div>
+
+        <div class="foto">
+            <img
+                src="WhatsApp Image 2026-03-17 at 23.29.23(1).jpg"
+                alt="Foto Profil Brayyan Rains Pratama"
+            >
+        </div>
+    </section>
+
+    <!-- Tentang Saya -->
+    <section class="content tentang" id="tentang">
+        <h2 class="judul">Tentang <span>Saya</span></h2>
+
+        <p class="deskripsi">
+            Perkenalkan, nama saya Brayyan Rains Pratama.
+            Saya sedang mempelajari teknologi informasi dan pemrograman.
+            Saya mahasiswa Universitas Bangka Belitung. Saya senang
+            mencoba hal baru, mempelajari teknologi, dan mengembangkan
+            keterampilan melalui berbagai proyek.
+        </p>
+    </section>
+
+    <!-- Keahlian -->
+    <section class="content" id="keahlian">
+        <h2 class="judul">Keahlian <span>Saya</span></h2>
+
+        <div class="container">
+            <div class="card">
+                <div class="ikon">🌐</div>
+                <h3>HTML</h3>
+                <p>Membuat struktur halaman website.</p>
+            </div>
+
+            <div class="card">
+                <div class="ikon">🎨</div>
+                <h3>CSS</h3>
+                <p>Menciptakan ide, menyusun tata letak, dan desain website.</p>
+            </div>
+
+            <div class="card">
+                <div class="ikon">💻</div>
+                <h3>Java</h3>
+                <p>Mempelajari logika dan dasar pemrograman.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyek -->
+    <section class="content" id="proyek">
+        <h2 class="judul">Proyek <span>Saya</span></h2>
+
+        <div class="container">
+            <div class="card">
+                <div class="ikon">🖥️</div>
+                <h3>Website Portofolio</h3>
+                <p>Website untuk menampilkan profil dan kemampuan.</p>
+            </div>
+
+            <div class="card">
+                <div class="ikon">☕</div>
+                <h3>Program Java</h3>
+                <p>Program sederhana untuk melatih logika pemrograman.</p>
+            </div>
+
+            <div class="card">
+                <div class="ikon">🎮</div>
+                <h3>Sistem Rental</h3>
+                <p>Program rental PlayStation menggunakan Java.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section class="content kontak" id="kontak">
+        <h2 class="judul">Hubungi <span>Saya</span></h2>
+
+        <p>
+            Email:
+            <a href="mailto:dev@brayyan.my.id">
+                dev@brayyan.my.id
+            </a>
+        </p>
+
+        <p>
+            Instagram:
+            <a href="https://www.instagram.com/_braynprtma/" target="_blank" rel="noopener noreferrer">
+                @_braynprtma
+            </a>
+        </p>
+
+        <p>HP: 083827950705</p>
+
+        <a class="btn" href="mailto:Brayyan.my.id">
+            Kirim Email
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Brayyan | Portofolio Pribadi</p>
+    </footer>
+
+</body>
+</html>
